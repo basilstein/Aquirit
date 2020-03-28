@@ -20,14 +20,14 @@ export default function BottomTabNavigator({ navigation, route }) {
         component={FlashcardsScreen}
         options={{
           title: 'Flashcards',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-albums"/>,
         }}
       />
       <BottomTab.Screen
         name="Topics"
         component={TopicsScreen}
         options={{
-          title: 'Resources',
+          title: 'Topics',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
         }}
       />
@@ -37,11 +37,12 @@ export default function BottomTabNavigator({ navigation, route }) {
 
 function getHeaderTitle(route) {
   const routeName = route.state?.routes[route.state.index]?.name ?? INITIAL_ROUTE_NAME;
+  return 'Aquirit';
 
-  switch (routeName) {
+  /*switch (routeName) {
     case 'Flashcards':
       return 'How to get started';
     case 'Topics':
       return 'Topics to learn more';
-  }
+  }*/
 }
