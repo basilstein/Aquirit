@@ -30,7 +30,7 @@ export default function FlashcardsScreen() {
           </View>
 
           <Text style={styles.getStartedText}>
-            Change anytest of the text, save the file, and your app will automatically reload.
+            Change any test of the text, save the file, and your app will automatically reload.
           </Text>
         </View>
 
