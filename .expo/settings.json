@@ -3,5 +3,6 @@
   "lanType": "ip",
   "dev": true,
   "minify": false,
-  "urlRandomness": "kc-hvu"
+  "urlRandomness": "kc-hvu",
+  "https": false
 }
