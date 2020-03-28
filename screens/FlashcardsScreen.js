@@ -23,7 +23,7 @@ export default function FlashcardsScreen() {
         <View style={styles.getStartedContainer}>
           <DevelopmentModeNotice />
 
-          <Text style={styles.getStartedText}>Roman Sucks</Text>
+          <Text style={styles.getStartedText}>right here</Text>
 
           <View style={[styles.codeHighlightContainer, styles.FlashcardsScreenFilename]}>
             <MonoText>screens/FlashcardsScreen.js</MonoText>
