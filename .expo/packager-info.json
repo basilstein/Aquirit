@@ -1,1 +1,9 @@
-{}
+{
+  "devToolsPort": 19002,
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 11316,
+  "expoServerNgrokUrl": "https://kc-hvu.basilstein.aquirit.exp.direct",
+  "packagerNgrokUrl": "https://packager.kc-hvu.basilstein.aquirit.exp.direct",
+  "ngrokPid": 11024
+}
