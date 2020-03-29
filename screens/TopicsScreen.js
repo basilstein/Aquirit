@@ -9,8 +9,9 @@ export default function TopicsScreen() {
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
       <TopicSection
         icon="ios-chatboxes"
-        text="Introduction"
-      />
+        text="Introduction">
+      </TopicSection>
+      
 
     </ScrollView>
   );
@@ -19,12 +20,13 @@ function Topic(onclick, text) {
   return (
     <RectButton onclick = {onclick}>
       <View style={styles.TopicSection}>
-        <Text></Text>
+        <Text>{text}</Text>
       </View>
     </RectButton>
   );
 }
 function TopicSection({icon, text, topics}) {
+
   return (
     <View style={styles.TopicSection}>
       <View style={styles.TopicSectionContainer && {flexDirection: 'row'}}>
@@ -32,6 +34,9 @@ function TopicSection({icon, text, topics}) {
         <Text style={styles.TopicSectionText}>{" " + text}</Text>
       </View>
       <View style={styles.TopicSectionTextContainer}>
+        <RectButton onclick = "insert">
+          <Text>text</Text>
+        </RectButton>
       </View>
     </View>
   );
