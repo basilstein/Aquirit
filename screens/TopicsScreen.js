@@ -11,19 +11,27 @@ export default function TopicsScreen() {
         icon="ios-chatboxes"
         text="Introduction"
       />
+
     </ScrollView>
   );
 }
-
-function TopicSection({icon, text}) {
+function Topic(onclick, text) {
   return (
-    <View style={[styles.TopicSection]}>
+    <RectButton onclick = {onclick}>
+      <View style={styles.TopicSection}>
+        <Text></Text>
+      </View>
+    </RectButton>
+  );
+}
+function TopicSection({icon, text, topics}) {
+  return (
+    <View style={styles.TopicSection}>
       <View style={styles.TopicSectionContainer && {flexDirection: 'row'}}>
         <Ionicons name={icon} size={32} color="rgba(0,0,0,0.35)" />
         <Text style={styles.TopicSectionText}>{" " + text}</Text>
       </View>
       <View style={styles.TopicSectionTextContainer}>
-          
       </View>
     </View>
   );
