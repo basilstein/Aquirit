@@ -8,27 +8,24 @@ export default function TopicsScreen() {
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
       <TopicSection
-        width="32px"
         icon="ios-chatboxes"
         text="Introduction"
-        isLastTopicSection
       />
     </ScrollView>
   );
 }
 
-function TopicSection({ icon, text, isLastTopicSection }) {
+function TopicSection({icon, text}) {
   return (
-    <RectButton id="Rectangle" style={[styles.TopicSection, isLastTopicSection && styles.lastTopicSection]}>
-      <View style={{ flexDirection: 'row' }}>
-        <View style={styles.TopicSectionContainer}>
-          <Ionicons name={icon} size={32} color="rgba(0,0,0,0.35)" />
-        </View>
-        <View style={styles.TopicSectionTextContainer}>
-          <Text style={styles.TopicSectionText}>{text}</Text>
-        </View>
+    <View style={[styles.TopicSection]}>
+      <View style={styles.TopicSectionContainer && {flexDirection: 'row'}}>
+        <Ionicons name={icon} size={32} color="rgba(0,0,0,0.35)" />
+        <Text style={styles.TopicSectionText}>{" " + text}</Text>
       </View>
-    </RectButton>
+      <View style={styles.TopicSectionTextContainer}>
+          
+      </View>
+    </View>
   );
 }
 
@@ -48,12 +45,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fdfdfd',
     paddingHorizontal: 15,
     paddingVertical: 15,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderBottomWidth: 0,
-    borderColor: '#ededed',
-  },
-  lastTopicSection: {
-    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderWidth: 3,
+    borderBottomWidth: 3,
+    borderColor: '#987dd4',
   },
   TopicSectionText: {
     fontSize: 20,
