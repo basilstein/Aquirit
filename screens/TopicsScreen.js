@@ -2,43 +2,52 @@ import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import * as WebBrowser from 'expo-web-browser';
-import { RectButton, ScrollView } from 'react-native-gesture-handler';
+import {RectButton, ScrollView } from 'react-native-gesture-handler';
 
 export default function TopicsScreen() {
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-      <TopicSection
-        icon="ios-chatboxes"
-        text="Introduction">
-      </TopicSection>
-      
-
+      <IntroductionSection></IntroductionSection>
     </ScrollView>
   );
 }
-function Topic(onclick, text) {
+function IntroductionSection() {
   return (
-    <RectButton onclick = {onclick}>
-      <View style={styles.TopicSection}>
-        <Text>{text}</Text>
+    <View style={styles.TopicSection}>
+      <View style={styles.TopicSectionContainer && {flexDirection: 'row'}}>
+        <Ionicons name="ios-chatboxes" size={32} color="rgba(0,0,0,0.35)" />
+        <Text style={styles.TopicSectionText}> Introduction</Text>
       </View>
-    </RectButton>
+      <RectButton /*onPress={}*/>
+        <View style={styles.TopicSection}>
+          <Text>Greetings</Text>
+        </View>
+      </RectButton>
+    </View>
   );
 }
-function TopicSection({icon, text, topics}) {
-
+function Called(){
+  <Text>Bruh</Text>
+}
+/*function TopicSection({icon, text}) {
   return (
     <View style={styles.TopicSection}>
       <View style={styles.TopicSectionContainer && {flexDirection: 'row'}}>
         <Ionicons name={icon} size={32} color="rgba(0,0,0,0.35)" />
         <Text style={styles.TopicSectionText}>{" " + text}</Text>
       </View>
-      <View style={styles.TopicSectionTextContainer}>
+        {props.children}
+    </View>
+  );
+}*/
+
+function Topic(onclick, text) {
+  return (
+    <View style={styles.TopicSectionTextContainer}>
         <RectButton onclick = "insert">
           <Text>text</Text>
         </RectButton>
       </View>
-    </View>
   );
 }
 
@@ -64,6 +73,11 @@ const styles = StyleSheet.create({
   },
   TopicSectionText: {
     fontSize: 20,
+    alignSelf: 'flex-start',
+    marginTop: 1,
+  },
+  TopicText: {
+    fontSize: 18,
     alignSelf: 'flex-start',
     marginTop: 1,
   },
