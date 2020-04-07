@@ -26,9 +26,6 @@ function IntroductionSection() {
     </View>
   );
 }
-function Called(){
-  <Text>Bruh</Text>
-}
 /*function TopicSection({icon, text}) {
   return (
     <View style={styles.TopicSection}>
