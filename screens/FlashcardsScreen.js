@@ -3,9 +3,7 @@ import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react
 import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
 
-import 
-
-import { MonoText } from '../components/StyledText';
+import { MonoText } fro./topics/introductions/Greetings.js
 
 export default function FlashcardsScreen() {
   return (

@@ -4,6 +4,8 @@ import { Ionicons } from '@expo/vector-icons';
 import * as WebBrowser from 'expo-web-browser';
 import {RectButton, ScrollView } from 'react-native-gesture-handler';
 
+import Greetings from '../screens/topics/introductions/Greetings.js';
+
 export default function TopicsScreen() {
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
@@ -18,11 +20,11 @@ function IntroductionSection() {
         <Ionicons name="ios-chatboxes" size={32} color="rgba(0,0,0,0.35)" />
         <Text style={styles.TopicSectionText}> Introduction</Text>
       </View>
-      <RectButton /*onPress={}*/>
-        <View style={styles.TopicSection}>
+      <View style={styles.TopicSection}>
+        <RectButton onPress={Greetings()}>
           <Text>Greetings</Text>
-        </View>
-      </RectButton>
+        </RectButton>
+      </View>
     </View>
   );
 }
