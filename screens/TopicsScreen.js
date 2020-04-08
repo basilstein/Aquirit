@@ -2,6 +2,9 @@ import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import {RectButton, ScrollView } from 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { useNavigation } from '@react-navigation/native';
 
 import Greetings from '../screens/topics/introductions/Greetings';
 
@@ -12,7 +15,14 @@ export default function TopicsScreen() {
     </ScrollView>
   );
 }
+
 function IntroductionSection() {
+  const navigation = useNavigation();
+  const Stack = createStackNavigator();
+  <Stack.Screen
+    name="Greetings"
+    component={Greetings}
+  />  
   return (
     <View style={styles.TopicSection}>
       <View style={styles.TopicSectionContainer && {flexDirection: 'row'}}>
@@ -20,13 +30,14 @@ function IntroductionSection() {
         <Text style={styles.TopicSectionText}> Introduction</Text>
       </View>
       <View style={styles.TopicSection}>
-        <RectButton onPress={Greetings()}>
+        <RectButton onPress={() => navigation.navigate('Greetings')}>
           <Text>Greetings</Text>
         </RectButton>
       </View>
     </View>
   );
 }
+
 /*function TopicSection({icon, text}) {
   return (
     <View style={styles.TopicSection}>
